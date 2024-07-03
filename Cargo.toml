@@ -5,3 +5,9 @@ edition = "2021"
 description = "Tool to test your CPU"
 
 [dependencies]
+sysinfo = "0.29"
+indicatif = "0.17"
+
+[profile.release]
+lto = "fat"
+strip = "debuginfo"
